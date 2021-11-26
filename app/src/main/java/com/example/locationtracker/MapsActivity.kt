@@ -1,6 +1,7 @@
 package com.example.locationtracker
 
 
+import android.annotation.SuppressLint
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.util.Log
@@ -70,7 +71,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         else {
             fusedLocClient.lastLocation.addOnCompleteListener {
                 val location = it.result
-                val database: FirebaseDatabase = FirebaseDatabase.getInstance()
+                val database: FirebaseDatabase = FirebaseDatabase.getInstance("https://maps-333119-default-rtdb.europe-west1.firebasedatabase.app")
                 val ref: DatabaseReference = database.getReference("test")
                 if (location != null) {
                     val latLng = LatLng(location.latitude, location.longitude)
@@ -91,13 +92,12 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         }
     }
 
-
+    @SuppressLint("MissingSuperCall")
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<out String>,
         grantResults: IntArray
     ) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == REQUEST_LOCATION) {
             if (grantResults.size == 1 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 getCurrentLocation()
