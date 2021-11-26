@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "633107504631",
+    "project_id": "maps-333119",
+    "storage_bucket": "maps-333119.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:633107504631:android:4f246cdeee30eda931e2f2",
+        "android_client_info": {
+          "package_name": "com.example.locationtracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "633107504631-oul4afs3tnn39evdach7ti2c3b4jmsrb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwGa0OZrqaRLbrkz3Ry1b1ahbDi9hOfPg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "633107504631-oul4afs3tnn39evdach7ti2c3b4jmsrb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
